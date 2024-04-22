@@ -73,19 +73,19 @@ const CardButton = styled.button`
 `
 
 const CartButton = styled.button`
-    cursor: pointer;
-    padding: 10px;
-    margin: 20px 0;
-    width: calc(100% - 20px);  // Reduzindo a largura para calcular o padding
-    background-color: red;  // Cor mais óbvia para teste
-    border: 2px solid black;  // Adicionando uma borda para visualização clara
-    border-radius: 10px;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
+cursor: pointer;
+padding: 0.5rem;
+margin: 1rem 0;
+width: 50%;
+background-color: #025959;
+border: 0;
+border-radius: 0.2rem;
+color: #F6ECE2;
+font-weight: bold;
+font-size: 1rem;
 
-    &:hover {
-        background-color: orange;  // Mudança clara para o estado hover
+&:hover {
+    background-color: #03A63C;
     }
 
 

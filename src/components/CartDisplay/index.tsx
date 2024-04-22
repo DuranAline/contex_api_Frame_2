@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCart } from '../../context/CartContext'; 
-import styles from './CartDisplay.module.css';       
+import styles from './CartDisplay.module.css';    
+   
 
 const CartDisplay: React.FC = () => {
   const { items, updateItemQuantity, removeItem, decrementItemQuantity } = useCart();  // Extrai as funções e o estado 'items' do contexto do carrinho de compras

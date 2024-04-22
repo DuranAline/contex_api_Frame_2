@@ -1,6 +1,6 @@
 import React from 'react';
 import { useCart } from '../../context/CartContext'; 
-import { CardBody, CardButton, CardContainer, CardImg, CardFlex, CardTitle, CardText } from "../style-componentns/card/style";
+import { CardBody, CardButton, CardContainer, CardImg, CardFlex, CardTitle, CardText, CartButton } from "../style-componentns/card/style";
 import { HeartStraight } from "@phosphor-icons/react";
 import { addDoc, collection, getDocs, query } from "firebase/firestore";
 import { db } from "../../services/firebaseConnection";
@@ -62,7 +62,7 @@ const Card: React.FC<CardProps> = ({id, title, price, description, category, ima
                     <CardTitle>{title}</CardTitle>
                     <CardFlex>
                         <CardText>R$ {price}</CardText>
-                        <button onClick={handleAddToCart}>Adicionar no Carrinho</button>  {/* Botão para adicionar ao carrinho */}
+                        <CartButton onClick={handleAddToCart}>Adicionar</CartButton>  {/* Botão para adicionar ao carrinho */}
                         <HeartStraight size={26} color="gray" weight="fill" onClick={handleBookmark} />  {/* Ícone para adicionar aos favoritos */}
                     </CardFlex>
                     <CardButton onClick={() => { /* Função para ver mais detalhes */ }}>Ver Mais</CardButton>

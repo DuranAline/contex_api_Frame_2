@@ -1,4 +1,4 @@
-// Arquivo: src/components/navbar/index.tsx
+
 import React, { useState } from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';

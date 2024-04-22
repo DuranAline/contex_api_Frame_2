@@ -1,8 +1,11 @@
-*{
+*{ 
   font-size: 16px;
   box-sizing: border-box;
   font-family: "Reddit Mono", monospace;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
+}
+body {
+  margin: 0;
 }
