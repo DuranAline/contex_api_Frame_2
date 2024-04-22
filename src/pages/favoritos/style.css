@@ -1,0 +1,14 @@
+.text-bookmark {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #203936;
+}
+
+.card-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
