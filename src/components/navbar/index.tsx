@@ -1,10 +1,13 @@
+// Arquivo: src/components/navbar/index.tsx
 import React, { useState } from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
-import { AmazonLogo, List, ShoppingCartSimple } from "@phosphor-icons/react";  // Importar o ícone ShoppingCartSimple
+import { AmazonLogo, List, ShoppingCartSimple } from "@phosphor-icons/react";
+import { useCart } from '../../context/CartContext'; // Importe useCart
 
 export function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const { cartQuantity } = useCart(); // Use o cartQuantity do context
 
     return (
         <nav className='navbar'>
@@ -20,7 +23,7 @@ export function Navbar() {
                 <li><Link to={'/favoritos'} className='link'>Favoritos</Link></li>
                 <li><Link to={'/perfil'} className='link'>Perfil</Link></li>
                 <li><Link to={'/login'} className='link'>Login</Link></li>
-                <li><Link to={'/cart'} className='link'><ShoppingCartSimple size={28} className="cart-icon" /></Link></li>
+                <li><Link to={'/cart'} className='link'><ShoppingCartSimple size={28} className="cart-icon" />{cartQuantity}</Link></li>
             </ul>
         </nav>
     );
